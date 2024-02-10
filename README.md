@@ -24,7 +24,7 @@ The target of this challenge is to analyze the content of an image of the userâ€
 
 <p align="center">
 Launch the utility: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+![image](https://github.com/msislam23/DigitalForensics/assets/157939065/da7d86a7-e4c0-48e8-92a0-4957490a35c7)
 <br />
 <br />
 Select the disk:  <br/>
