@@ -33,7 +33,7 @@ Please check below the image of the disk need to be checked  <br/>
 <img src="https://github.com/msislam23/DigitalForensics/assets/157939065/da7d86a7-e4c0-48e8-92a0-4957490a35c7" height="80%" width="80%"/>
 <br />
 <br />
-Select the disk:  <br/>
+Evidence 1 of 4:  <br/>
 <img src="https://i.imgur.com/tcTyMUE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
