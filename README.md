@@ -34,7 +34,19 @@ Please check below the image of the disk need to be checked  <br/>
 <br />
 <br />
 Evidence 1 of 4:  <br/>
-<img src="https://i.imgur.com/tcTyMUE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+As per the above hints, for any zip file with password needs to be investigated. I used kali Linux CLI to navigate different folders and files of the disk image, I found a password protected zip file named “.a0415ns.zip” at /J Harrison Disk Image 10.09.2019/WebDev work/unfinished webpages/to-do and this file name starts with “.” (as suggested in the hints I should check all files including hidden ones as well). So I decided to investigate this file. 
+
+
+ - <b> First I find out the password using the command: "fcrackzip –D –p /usr/share/wordlist/rockyou.txt –u .a0415ns.zip" </b> <br/> I have used dictionary approach to crack the file using the default rockyou.txt file for finding the password from the list in the text file.<br />
+ 
+ - <b> I used the password to unzip the file and used "ls –a" commad to find all files in the current directory.</b>
+ - <b> A new file named employeedump is detected</b>
+ - <b> To determine what type of file is the new one, I used "file employeedump" command and it shows the file as text.</b>
+ - <b> I renamed the file to a text file using the command "mv employeedump employeedump.txt"</b>
+ - <b> Then I used "strings employeedump.txt" command to read the content of the file and which shows our first evidence {Part 1 of 4}</b>
+ <br/> This was all employee information.<br />
+
+<img src="https://github.com/msislam23/DigitalForensics/assets/157939065/367c92e3-7c80-4459-b923-908918fd93df"/>
 <br />
 <br />
 Enter the number of passes: <br/>
