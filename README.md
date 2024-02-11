@@ -48,25 +48,44 @@ As per the above hints, for any zip file with password needs to be investigated.
 
 <img src="https://github.com/msislam23/DigitalForensics/assets/157939065/367c92e3-7c80-4459-b923-908918fd93df"/>
 <br />
+
+<p align="center">
 <br />
-Enter the number of passes: <br/>
-<img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Confirm your selection:  <br/>
-<img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Wait for process to complete (may take some time):  <br/>
-<img src="https://i.imgur.com/JL945Ga.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Evidence 2 of 4: <br/>
+For evidence two, there are two steps. At first I investigated the saved email folder as per the suggestion in the hint. I have found the clue that the person has hidden the evidence using steganography in a .jpg file and the password to extract that file is “password”. I found this information inside Form1.jpg file inside “Saved Emails” at "/J Harrison Disk Image 10.09.2019/Saved Emails"
+<img src="https://github.com/msislam23/DigitalForensics/assets/157939065/3f529930-7ece-4be9-b8da-2f5575924984"/>
 <br />
 <br />
-Sanitization complete:  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+At the last part I found the following information:  <br/>
+<img src="https://github.com/msislam23/DigitalForensics/assets/157939065/20668a3d-5c8f-4cbf-8184-dac525b3f2da"/>
 <br />
 <br />
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Then I navigated through the files and folders. Inside image folder at /J Harrison Disk Image 10.09.2019/Images, I found several images. As image files are used to hide other files using steganography. I used the command “steghide --extract -sf filename.jpg” using password “password” for several jpg files to extract hidden file inside. The image laptop.jpg returned a text file named passwords. And after extracting the content of the text file, I found my second piece of evidence {2/4}<br/>
+<br />
+This shows list of employee passwords<br/>
+<img src="https://github.com/msislam23/DigitalForensics/assets/157939065/986c9eec-8603-4e51-b75b-92adf25b7ac9"/>
+<br />
+<br />
+Evidence 3 of 4: <br/>
+This third evidence was hidden inside a file by changing the file extension inside the directory "/J Harrison Disk Image 10.09.2019/Weekly Meeting Notes/Week 10". I used "file" command in kali Linux to detect the real file type and used "mv" command to change it back to its real file extension to find the evidence. This file was showing as an ".xml" but it was actually an image file. I converted it back to ".jpeg" format to find the evidence. 
+<img src="https://github.com/msislam23/DigitalForensics/assets/157939065/b44ab694-f1c0-40a0-b435-071789f04b71"/>
+<img src="https://github.com/msislam23/DigitalForensics/assets/157939065/e537e479-fc03-4fba-879b-eaca5c4a45a8"/>
+<br />
+<br />
+And the evidence is: <br/>
+<img src="https://github.com/msislam23/DigitalForensics/assets/157939065/e229d5a1-15d1-49ba-a01a-869ac2f5ab25"/>
+<br />
+This evidence represents office locations<br/>
+<br />
+<br />
+Evidence 4 of 4:<br/>
+This was hidden inside the "/J Harrison Disk Image 10.09.2019/WebDev work/unfinished webpages/templatemo_508_power/css".
+I used "file" and "strings" commands to find the evidence in kali linux.
+
+<img src="https://github.com/msislam23/DigitalForensics/assets/157939065/a59ee24f-9701-4a85-9ce7-3c992cae3342"/>
+<br />
+This is personal information of Colin Andrews
+<br />
 </p>
 
 <!--
